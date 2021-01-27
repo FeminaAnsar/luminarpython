@@ -1,5 +1,6 @@
 num=int(input("Enter number to check prime or not:"))
-flag=0
+flag=0.
+
 for i in range(2,num):
     print(i)
     if(num%i==0):
