@@ -9,14 +9,16 @@ lst=[1,2,3,4,5,6,7,8,9]
     #        print(lst[i],lst[j])
 low=0
 up=len(lst)-1
+pair_list=[]
 element=int(input("Enter element:"))
 while(low<up):
     total=lst[low]+lst[up]
     if(element==total):
-        print(lst[low],lst[up])
-        break
+        pair_list.append((lst[low],lst[up]))
+        up=up-1
     elif(element>total):
         low+=1
     else:
         up-=1
+print(pair_list)
 
