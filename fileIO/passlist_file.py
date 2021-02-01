@@ -1,0 +1,8 @@
+stud=open("students","r")
+fail=open("fail","r")
+stud_1=set(stud)
+fail_1=set(fail)
+print("stud 1:",stud_1)
+print("fail_1:",fail_1)
+passlist=stud_1.difference(fail_1)
+print("Pass List:",passlist)
