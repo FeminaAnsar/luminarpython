@@ -1,0 +1,36 @@
+ data structure
+    1)linear data structure
+        array
+        stack
+        queue
+    2)non linear data structure
+        tree
+        graph
+        linked list
+
+
+   STACK
+    PUSH-Adding element to stack
+    POP-Removing an element from stack
+
+Procedure stk(top,element)
+
+case 1:
+push(element)
+
+if top>size
+    stack full
+else
+     stk[top]=element
+     top+=1
+
+case 2:
+Pop
+    if top<=0
+        stack empty
+    else top-=1
+
+case 3:
+display()
+ for 0 to top
+    print items
