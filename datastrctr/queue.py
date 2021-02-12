@@ -21,7 +21,7 @@ def q_insert():
 def q_delete():
     global rear
     global frnt
-    if (frnt==rear)|(frnt>rear):
+    if ((frnt==rear)|(frnt>rear)):
         print("Queue is empty")
     else:
         rear-=1
@@ -29,9 +29,7 @@ def q_delete():
         frnt+=1
 
 def display():
-    #if frnt==-1:
-     #   print("Queue is empty")
-    #else:
+
         for i in range(frnt,rear):
             print(que[i])
 

@@ -2,15 +2,15 @@
 from datetime import datetime
 
 class Bank:
-    bank_name="sbi"
-    def create_account(self,accno,personname,min_balanc):
+    bank_name="sbi" #static or class variable
+    def create_account(self,accno,personname,min_balance):
         self.accno=accno
         self.p_name=personname
         self.balance=min_balance
-       e
+
     def deposit(self,amount):
         self.balance+=amount
-        print("Your account",self.accno,"has been credited with amt",amount,"on",datetime.today(),"avl bal",self.balance)
+        print(Bank.bank_name,"Your account",self.accno,"has been credited with amt",amount,"on",datetime.today(),"avl bal",self.balance)
     def withdrawal(self,amount):
         if self.balance>amount:
             self.balance-=amount
