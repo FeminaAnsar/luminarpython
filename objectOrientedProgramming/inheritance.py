@@ -7,3 +7,4 @@ class Child(Parent):
 
 c=Child()
 c.phone()
+#print(c)

@@ -17,3 +17,4 @@ class Maths:
 
 m=Maths()
 m.add(10)
+#rcently implemented method is only invoked
