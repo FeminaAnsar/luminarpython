@@ -17,20 +17,39 @@ dsal=[]
 for lines in f:
     eid,name,desig,exp,salary=lines.rstrip("\n").split(",")
     emplist.append(Employee(eid,name,desig,exp,salary))
-for employee in emplist:
-    if employee.desig=="developer":
-        print(employee.name)
-        dsal.append(employee.salary)
-lowsal=min(dsal)
-for employee in emplist:
-    if ((employee.desig=="developer")&(employee.salary==lowsal)):
-        print(employee)
-for employee in emplist:
-    sallis.append(employee.salary)
-print(max(sallis))
-highsal=max(sallis)
 
-for employee in emplist:
-    if employee.salary==highsal:
-        print(employee)
+#print employee details whose designation =developer
+#devop=list(filter(lambda emp:emp.desig=="developer",emplist))
+#for emp in devop:
+ #   print(emp)
+
+ #no of employees as developer
+
+cnt=len(list(filter(lambda emp:emp.desig=="developer",emplist)))
+print("No of developers:",cnt)
+
+#print employee details with high sal
+maxsal=max(list(map(lambda emp:emp.salary,emplist)))
+print(maxsal)
+
+
+
+
+
+#for employee in emplist:
+ #   if employee.desig=="developer":
+  #      print(employee.name)
+   #     dsal.append(employee.salary)
+#lowsal=min(dsal)
+#for employee in emplist:
+  #  if ((employee.desig=="developer")&(employee.salary==lowsal)):
+   #     print(employee)
+#for employee in emplist:
+ #   sallis.append(employee.salary)
+#print(max(sallis))
+#highsal=max(sallis)
+
+#for employee in emplist:
+ #   if employee.salary==highsal:
+  #      print(employee)
 
