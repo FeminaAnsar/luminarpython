@@ -31,6 +31,9 @@ print("No of developers:",cnt)
 #print employee details with high sal
 maxsal=max(list(map(lambda emp:emp.salary,emplist)))
 print(maxsal)
+for emp in emplist:
+    if emp.salary==maxsal:
+        print(emp.name)
 
 
 
