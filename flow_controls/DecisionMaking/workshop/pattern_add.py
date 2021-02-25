@@ -5,6 +5,6 @@ for i in range(1,(int(num1)+1)):
     data=num1*i
     print(data)
     res=res+int(data)
-print(res)
+print("Result=",res)
 
 

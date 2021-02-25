@@ -13,7 +13,7 @@ if a > b and a > c:
     else:
         print(c)
         print(b)
-    print(new_l)
+
 
 if b > a and b > c:
     print(b)
