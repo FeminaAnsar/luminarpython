@@ -1,0 +1,36 @@
+h1{
+    font-family: 'Lobster', cursive;
+    text-align:center;
+}
+table{
+    margin:auto;
+}
+td{
+    padding:50px;
+    height:300px;
+    border-style: solid;
+    border-color: white;
+    border-width: 6px;
+}
+
+.violet{
+     background-color: violet;
+}
+.indigo{
+    background-color:indigo;
+}
+.blue{
+    background-color:blue;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+.orange{
+    background-color: orange;
+}
+.red{
+    background-color: red;
+}

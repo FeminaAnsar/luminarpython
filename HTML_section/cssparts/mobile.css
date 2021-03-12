@@ -1,0 +1,49 @@
+body{
+    background-image:url("apple-1868496__340.webp");
+}
+h1{
+    color:darkolivegreen;
+    text-align: center;
+}
+#nokia{
+    background-color: darkslategrey;
+    border-style: solid;
+    border-color: firebrick;
+    border-width: 1px;
+    width:30%;
+    text-align: center;
+
+
+}
+#samsung{
+    background-color: deeppink;
+    border-style: solid;
+    border-color:gold;
+    border-width:1px;
+    width:30%;
+    text-align: center;
+}
+#c3h{
+    color:firebrick;
+    text-align:center;
+}
+.first{
+    background-color:lightpink;
+    border-style: solid;
+    border-color: rgb(150, 59, 59);
+    border-width: 1px;
+    width:30%;
+    text-align: center;
+}
+#mi{
+    text-align: center;
+    color:darkorange;
+}
+#sam{
+    text-align: center;
+    color:darksalmon;
+}
+#iph{
+    text-align: center;
+    color:cornflowerblue;
+}

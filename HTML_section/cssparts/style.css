@@ -1,9 +1,15 @@
 /* 
 tagName,id,class{
-    property:value;
+    pproperty:value;
     property:value;
 }
 */
+body{
+    background-color:rgb(219, 31, 200)
+}
 h1{
     color:blueviolet;
+}
+h2{
+    color:#db1f3b
 }
