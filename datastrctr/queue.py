@@ -1,46 +1,45 @@
-size=int(input("Enter size of queue:"))
-frnt=-1
-rear=-1
-que=[]
+size=int(input("Enter the size : "))
+queue=[]
+
+rear=0
+front=0
+
 n=1
-def q_insert():
+
+def insertion():
     global rear
-    global frnt
-    if (rear>=(size-1)):
-        print("Queue is Full")
-    elif frnt==-1:
-        frnt=0
-    elif rear<size:
-        item =int(input("Enter item:"))
-        que.insert(rear,item)
-        rear += 1
+    global front
+    if rear<size:
+        item=int(input("Enter the element : "))
+        queue.insert(rear,item)
+        rear+=1
     else:
-        pass
+        print(rear)
+        print("Queue is full...!!!")
 
 
-def q_delete():
+def deletion():
     global rear
-    global frnt
-    if ((frnt==rear)|(frnt>rear)):
-        print("Queue is empty")
+    global front
+    #rear-=1
+    if(rear==front):
+        print("Queue is empty..!!")
     else:
-        rear-=1
-        print(que[frnt],"popped out")
-        frnt+=1
+        print(queue[front],"Deleted...!!")
+        front+=1
 
 def display():
-
-        for i in range(frnt,rear):
-            print(que[i])
+    for i in range(front,rear):
+        print(queue[i])
 
 while(n!=0):
-    option=int(input("Enter operation press\n 1)INSERT\n 2)DELETE\n 3)DISPLAY\n"))
-    if option==1:
-        q_insert()
-    elif option==2:
-        q_delete()
-    elif option==3:
+    option=int(input("Enter the Task : 1)INSERT  2)DELETE 3)DISPLAY "))
+    if(option==1):
+        insertion()
+    elif(option==2):
+        deletion()
+    elif(option==3):
         display()
     else:
-        print("Invalid option")
-    n=int(input("do you want to continue press 0 for exit"))
+        print("Invalid option entered...!!!!")
+    n=int(input("EXIT==press'0'   CONTINUE==press any key"))

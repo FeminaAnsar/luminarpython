@@ -8,7 +8,7 @@ db=mysql.connector.connect(
     database='pythondecember'
 )
 cursor=db.cursor()
-sql="create table movie(id int,name varchar(50),year varchar(50),rating int)"
+sql="create table movie1(id int,name varchar(50),year varchar(50),rating int)"
 cursor.execute(sql)
 print("Table created")
 db.close()

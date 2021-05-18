@@ -1,4 +1,4 @@
-pattern="ABACBBAC"
+pattern="ABBACBBAC"
 #find first recursive char A
 dict={}
 for ch in pattern:
