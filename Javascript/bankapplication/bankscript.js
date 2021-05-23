@@ -27,6 +27,10 @@ class Bank {
             return -1
         }
     }
+    static setStorage(acntno,pswd){
+        localStorage.setItem("acntno",acntno)
+        localStorage.setItem("pswd",pswd)
+    }
     static login() {
         var accno = document.querySelector("#acno").value
         var password = document.querySelector("#pwd").value
@@ -36,6 +40,7 @@ class Bank {
         }
         else if (user == 1) {
             alert("Success")
+            Bank.setStorage(accno,password)
             window.location.href = "home.html"
         }
         else if (user == -1) {
