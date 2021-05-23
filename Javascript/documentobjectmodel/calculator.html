@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="calcstyle.css">
+    <!-- javascript link -->
+    <script src="calc.js"></script>
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-12 col-lg-4"></div>
+        <div class="col-12 col-lg-4">
+            <!-- <div class="container"> -->
+            <div class="main">
+                <table class="frame mt-4">
+                    <tr>
+                        <input type="email" class="control mt-2" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button type="button" class="btn btn-danger" onclick="del()">C</button></td>
+                        
+
+
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="btn btn-secondary" onclick="disBox('9')">9</button></td>
+                        <td><button type="button" class="btn btn-secondary" onclick="disBox('8')">8</button></td>
+                        <td><button type="button" class="btn btn-secondary" onclick="disBox('7')">7</button></td>
+                        <td><button type="button" class="btn btn-dark" onclick="disBox('/')">/</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="btn btn-secondary" onclick="disBox('6')">6</button></td>
+                        <td><button type="button" class="btn btn-secondary" onclick="disBox('5')">5</button></td>
+                        <td><button type="button" class="btn btn-secondary" onclick="disBox('4')">4</button></td>
+                        <td><button type="button" class="btn btn-dark" onclick="disBox('*')">*</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="btn btn-secondary" onclick="disBox('3')">3</button></td>
+                        <td><button type="button" class="btn btn-secondary" onclick="disBox('2')">2</button></td>
+                        <td><button type="button" class="btn btn-secondary" onclick="disBox('1')">1</button></td>
+                        <td><button type="button" class="btn btn-dark" onclick="disBox('-')">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="btn btn-secondary zero" onclick="disBox('0')">0</button></td>
+                        <td><button type="button" class="btn btn-secondary dot" onclick="disBox('.')">.</button></td>
+                        <td><button type="button" class="btn btn-dark equal" onclick="equals()">=</button></td>
+                        <td><button type="button" class="btn btn-dark plus" onclick="disBox('+')">+</button></td>
+                    </tr>
+                </table>
+            </div>
+            <!-- </div> -->
+
+        </div>
+        <div class="col-12 col-lg-4"></div>
+    </div>
+
+
+</body>
+
+</html>

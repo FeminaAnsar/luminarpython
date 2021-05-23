@@ -1,0 +1,24 @@
+body{
+    padding: 5%;
+}
+.main{
+    background-color: darkslategray;
+    border-radius: 2%;
+    padding: 4%;
+    width: 230px;
+    height: 368px;
+}
+
+
+td{
+    padding: 7px;
+    border-spacing: 25px;
+}
+.control{
+    background-color: rgb(186, 225, 226);
+    width: 200px;
+    height: 45px;
+}
+.dot{
+    width: 35px;
+}

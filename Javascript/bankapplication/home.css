@@ -1,0 +1,10 @@
+.btn-primary{
+    position: relative;
+    top: 20px;
+}
+.maindiv{
+    background-color: rgb(230, 241, 206);
+    height: 360px;
+    border-radius: 4px;
+    padding: 20px;
+}

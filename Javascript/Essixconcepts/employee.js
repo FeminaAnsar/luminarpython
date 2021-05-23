@@ -22,4 +22,6 @@ employee.forEach(emp=>console.log(emp.desig))
 //employee.map(emp=>emp.sal+2000).forEach(sal=>console.log(sal))
 //employee.map(emp=>emp.name.toUpperCase()).forEach(name=>console.log(name))
 //employee.filter(emp=>emp.desig=="developer").forEach(emp=>console.log("Developers:"+emp.name))
-employee.sort((o1,o2)=>o1.sal>o2.sal?-1:1).forEach(emp=>console.log(emp))
+//employee.sort((o1,o2)=>o1.sal>o2.sal?-1:1).forEach(emp=>console.log(emp))  //sort employees salary
+const sal=employee.map(obj=>obj.sal).reduce((sal1,sal2)=>sal1>sal2?sal1:sal2)
+console.log(sal);
