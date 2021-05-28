@@ -1,3 +1,4 @@
+
 class Bank {
     static accountDetails() {
         let userData = {
@@ -28,8 +29,11 @@ class Bank {
         }
     }
     static setStorage(acntno,pswd){
-        localStorage.setItem("acntno",acntno)
-        localStorage.setItem("pswd",pswd)
+       let obj={
+           actno:acntno,
+           pswd:pswd
+       }
+       localStorage.setItem("data",JSON.stringify(obj))
     }
     static login() {
         var accno = document.querySelector("#acno").value
