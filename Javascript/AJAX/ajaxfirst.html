@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+    <script>
+        //we hae to create xmlhttp req object
+        var request=new XMLHttpRequest()
+        //we open()
+        request.open("get","https://jsonplaceholder.typicode.com/users")
+        //arg1:method.url
+        request.send()
+        request.onreadystatechange=()=>{
+           if(request.readyState==4){
+               if((request.status>199)&(request.status<300)){
+                   var data=JSON.parse(request.responseText)
+                   console.log(data);
+                   for(let obj of data){
+                       console.log(obj.name);
+                   }
+               }
+               else{
+                   console.log("fail");
+               }
+           }
+        }
+    </script>
+
+</html>

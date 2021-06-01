@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!--country Name,population,currency,flag-->
+
+<body>
+
+    <label for="">Enter CountryName</label>
+    <input type="text" class="country">
+    <button onclick=countryDetails()>Submit</button>
+    <table>
+        <tr>
+            <td>
+                Name
+            </td>
+            <td>
+                Population
+            </td>
+            <td>
+                Currency
+            </td>
+            <td>Flag</td>
+            <tbody class="result">
+
+            </tbody>
+        </tr>
+    </table>
+</body>
+<script>
+    function countryDetails() {
+        var request = new XMLHttpRequest()
+        var cntid = document.querySelector(".country").value
+        request.open("get", `https://restcountries.eu/rest/v2/name/${cntid}`)
+        request.send()
+        request.onreadystatechange = () => {
+            if (request.readyState == 4) {
+                if ((request.status > 199) & (request.status < 300)) {
+                    var data = JSON.parse(request.responseText)
+                    var html_data = ""
+                    data.forEach(obj => {
+                        html_data = `<tr><td>${obj.name}</td><td>${obj.population}</td><td>${obj.currencies[0].name}</td><td><img src="${obj.flag}" height="35px" width="65px"></td></tr>`
+
+                    })
+                    document.querySelector(".result").innerHTML = html_data
+                }
+            }
+        }
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create your Post</h1>
+    <label for="">Title</label>
+    <input type="text" class="title">
+    <label for="">Body</label>
+    <input type="text" class="bdy">
+    <label for="">Userid</label>
+    <input type="text" class="uid">
+    <button onclick=createPost()>CreateNewPost</button>
+</body>
+<script>
+    function createPost() {
+        var request = new XMLHttpRequest()
+        var title=document.querySelector(".title").value
+        var body=document.querySelector(".bdy").value
+        var userid=document.querySelector(".uid").value
+        var data={
+            title:title,
+            body:body,
+            userId:userid
+        }
+        request.open("post", `https://jsonplaceholder.typicode.com/posts`)
+        request.send()
+        request.onreadystatechange = () => {
+            if (request.readyState == 4) {
+                if ((request.status > 199) & (request.status < 300)) {
+                    var data = JSON.parse(request.responseText)
+                    alert("Success")
+                }
+            }
+        }
+    }
+</script>
+</html>
